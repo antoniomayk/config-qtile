@@ -227,7 +227,9 @@ def qtile_widgets_bar():
 def qtile_screens():
     return [
         Screen(
-            wallpaper="~/.config/qtile/assets/images/" + COLORS["BACKGROUND"] + ".jpeg",
+            wallpaper="~/.config/qtile/assets/images/"
+            + COLORS["BACKGROUND"][1:]
+            + ".jpeg",
             wallpaper_mode="fill",
             top=bar.Bar(
                 qtile_widgets_bar(),
